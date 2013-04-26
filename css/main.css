@@ -135,7 +135,7 @@ body{
     border-top:3px solid #f0542e;
     border-bottom:3px solid #f0542e;
     margin-top:20px;
-    padding:15px 15px 15px 32px;
+    padding:14px 15px 14px 32px;
 }
 
 #top .email{
@@ -177,6 +177,10 @@ h1{
 h2{
     font-family: 'Noto Sans', sans-serif;
     font-weight:normal;
+}
+
+h2,h3 {
+	line-height: 20px;
 }
 
 img{
@@ -486,13 +490,13 @@ iframe{
     margin-top:10px;
 }
 
+.center {
+	text-align:center;
+}
 
-
-
-
-
-
-
+.alert {
+	margin-top:10px;
+}
 
 
 
