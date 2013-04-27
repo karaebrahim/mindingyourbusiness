@@ -20,8 +20,8 @@
       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
       $headers .= "CC: " . MailUtil::KELLY_EMAIL . "\r\n";
 
-      //MailUtil::displayMail($to, $subject, $message, $headers);
-      mail($to, $subject, $message, $headers);
+      //MailUtil::displayMail($to, $subject, $message, $headers); return true;
+      return mail($to, $subject, $message, $headers);
     }
 
     /**

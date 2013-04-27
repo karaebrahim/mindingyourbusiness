@@ -24,40 +24,6 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
-        <script>
-          // sets the display of the div with the specified id
-          function setDisplay(id, display) {
-        	  var divid = document.getElementById(id);
-        	  divid.style.display = display;
-          }
-
-          // populates the innerHTML of the specified elementId with the HTML returned by the
-          // specified htmlString
-          function getRedirectHTML(element, htmlString) {
-        	  var xmlhttp;
-        	  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-        		  xmlhttp=new XMLHttpRequest();
-        	  } else {// code for IE6, IE5
-        		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        	  }
-          	  xmlhttp.onreadystatechange=function() {
-          		  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-          			  element.innerHTML=xmlhttp.responseText;
-          	      }
-       	      };
-        	  xmlhttp.open("GET", htmlString, true);
-       	      xmlhttp.send();
-          }
-
-          // sends an email with the specified message from the specified name and email; shows the
-          // confirmation message.
-          function sendEmail(name, email, msg) {
-        	  getRedirectHTML(document.getElementById("emailButton"),
-                  "util/mail.php?type=contact&name=" + name + "&email=" + email + "&msg=" + msg);
-        	  setDisplay("emailMessageDiv", "block");
-          }
-        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -65,6 +31,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <form name="contactForm" action="contact.php" method="post">
         <div id="wrapper">
             <div id="top" class="clearfix">
                 <nav>
@@ -87,25 +54,38 @@
                 <img src="img/iStock-poppies.jpg" />
             </div><!-- end #header -->
 
-            <div id='emailMessageDiv' class='alert alert-info center' style='display:none;'>
+<?php
+  if (isset($_POST["confirm"])) {
+    // If sending mail is confirmed, then send it & display confirmation message.
+    if (MailUtil::sendContactMail($_POST["confName"], $_POST["confEmail"], $_POST["confComments"])) {
+      echo "<div id='emailMessageDiv' class='alert alert-success center'>
               <button type='button' class='close' data-dismiss='alert'>&times;</button>
               <strong>Email sent successfully! Thank you!</strong>
-            </div>
+            </div>";
+    } else {
+      echo "<div id='emailMessageDiv' class='alert alert-error center'>
+              <button type='button' class='close' data-dismiss='alert'>&times;</button>
+              <strong>An error occurred while sending the email. Please try again.</strong>
+            </div>";
+    }
+  }
+?>
 
             <div id="content">
                 <div id="form">
                     <h1>contact</h1>
-                    <form action="contact.php" method="post">
-                        <fieldset class="personal-info">
-                            <label for="name">name</label><input type="text" name="name" id="name" required />
-                            <label for="email">email</label><input type="email" name="email" id="email" required />
-                        </fieldset>
-                        <fieldset class="comment-info">
-                            <label for="comments" class="column">questions/comments</label>
-                            <textarea id="comments" class="comments" name="comments" required></textarea>
-                            <input id="emailButton" class="btn" type="submit" name="submit" value="Send email" />
-                        </fieldset>
-                    </form>
+                    <fieldset class="personal-info">
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name" required />
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email" required />
+                    </fieldset>
+                    <fieldset class="comment-info">
+                        <label for="comments" class="column">questions/comments</label>
+                        <textarea id="comments" class="comments" name="comments" required></textarea>
+                        <input id="emailButton" class="btn" type="submit" name="submit"
+                               value="Send email" />
+                    </fieldset>
                 </div>
                 <div id="directions">
                     <h1>directions</h1>
@@ -115,9 +95,9 @@
                     <h3>From downtown Portland</h3>
                     <p>Head southwest on Congress Street aproximately 0.4 miles, and then turn right at Forest Avenue. After 4.6 miles, turn right at Riverside Street, and after 0.7 miles, turn right at 1039 Riverside Street. Turn left onto Tee Drive.</p>
                     <small>To find via GPS, enter 1039 Riverside Street, Portland, ME 04103</small>
-                    <iframe width="500" height="350" frameborder="2" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;output=embed"></iframe>
+                    <iframe width="500" height="350" frameborder="2" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;output=embed"></iframe>
                     <br />
-                    <small><a href="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;source=embed" style="color:#f0542e;text-align:left" target="_blank">View Larger Map</a></small>
+                    <small><a href="http://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;source=embed" style="color:#f0542e;text-align:left" target="_blank">View Larger Map</a></small>
                 </div>
             </div><!-- end #main -->
 
@@ -135,15 +115,26 @@
                 <h3 id='myModalLabel' class='center'>Confirm Email</h3>
             </div>
             <div class='modal-body'>
-                <p>Please confirm that you'd like to send the following email to Minding Your Business:</p>
-                <div id='email-body'></div>
+                <p>Please confirm that you'd like to send the following email to
+                   minding your business, inc.:</p>
+<?php
+  if (isset($_POST["submit"])) {
+    // If user tries to send contact email, modal will show what will be emailed.
+    echo "<strong>From:</strong> " . $_POST["name"] . " &lt;" . $_POST["email"] . "&gt;<br/><br/>" .
+         $_POST["comments"];
+    echo "<input type='hidden' name='confName' value='" . $_POST["name"] . "' />";
+    echo "<input type='hidden' name='confEmail' value='" . $_POST["email"] . "' />";
+    echo "<input type='hidden' name='confComments' value='" . $_POST["comments"] . "' />";
+  }
+?>
             </div>
             <div class='modal-footer'>
                 <button class='btn' data-dismiss='modal' aria-hidden='true'>Cancel</button>
-                <a id='sendEmailButton' href='#' class='btn btn-primary'
-                   data-dismiss='modal'>Send Email</a>
+                <input id="emailButton" class="btn btn-primary" type="submit"
+                       name="confirm" value="Send email" />
             </div>
         </div>
+        </form>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
@@ -153,19 +144,15 @@
 
 <?php
   if (isset($_POST["submit"])) {
-    // show confirmation modal with name, email and message; if user clicks 'send', then call
-    // JS sendEmail function.
+    // If user tries to send contact email, show modal and remove form validation.
     echo "<script>
-            $(\"#email-body\").html(\"<strong>From:</strong> " . $_POST["name"] . " &lt;" .
-                $_POST["email"] . "&gt;<br/><br/>" . $_POST["comments"] . "\");
-            var js = \"sendEmail(\'" . $_POST["name"] . "\',\'" . $_POST["email"] . "\',\'" .
-                $_POST["comments"] . "\')\";
-            $('#sendEmailButton').click(new Function(js));
-            $('#emailModal').modal('show');
+            $('#name').removeAttr('required');
+            $('#email').removeAttr('required');
+            $('#comments').removeAttr('required');
+            $('#emailModal').modal('toggle');
           </script>";
   }
 ?>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
