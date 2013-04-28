@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <?php
   require_once 'util/layout.php';
   require_once 'util/mail.php';
 
-  LayoutUtil::displayHeader();
+  LayoutUtil::displayHeadTag();
 ?>
     <body>
         <!--[if lt IE 7]>
@@ -14,15 +13,12 @@
         <!-- Add your site or application content here -->
         <form name="contactForm" action="contact.php" method="post">
         <div id="wrapper">
-
 <?php
   LayoutUtil::displayNavigationBar();
 ?>
-
             <div id="header">
                 <img src="img/iStock-poppies.jpg" />
             </div><!-- end #header -->
-
 <?php
   if (isset($_POST["confirm"])) {
     // If sending mail is confirmed, then send it & display confirmation message.
@@ -40,7 +36,6 @@
     }
   }
 ?>
-
             <div id="content">
                 <div id="form">
                     <h1>contact</h1>
@@ -70,11 +65,9 @@
                     <small><a href="http://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;source=embed" style="color:#f0542e;text-align:left" target="_blank">View Larger Map</a></small>
                 </div>
             </div><!-- end #main -->
-
 <?php
   LayoutUtil::displayFooter();
 ?>
-
         </div><!-- end #wrapper -->
 
         <div id='emailModal' class='modal hide fade' tabindex='-1' role='dialog'
@@ -105,7 +98,6 @@
             </div>
         </div>
         </form>
-
 <?php
   LayoutUtil::loadJavascriptMethods();
 

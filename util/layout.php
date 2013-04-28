@@ -8,9 +8,9 @@
   class LayoutUtil {
 
     /**
-     * Displays <head> tag.
+     * Displays <head> tag, loading stylesheets.
      */
-    public static function displayHeader() {
+    public static function displayHeadTag() {
       echo "
         <!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->
         <!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->
@@ -40,12 +40,12 @@
       echo "<div id=\"top\" class=\"clearfix\">
               <nav>
                 <ul>
-                  <li><a href=\"about.html\">about</a></li>
-                  <li><a href=\"services.html\">services</a></li>
+                  <li><a href=\"about.php\">about</a></li>
+                  <li><a href=\"services.php\">services</a></li>
                   <li><a href=\"contact.php\">contact</a></li>
                 </ul>
               </nav>
-              <a href=\"index.html\"><img src=\"img/logo3.png\" /></a>
+              <a href=\"index.php\"><img src=\"img/logo3.png\" /></a>
               <p class=\"center\">
                 <a href=\"tel:+12076197068\">ph: 207-619-7068</a> &emsp; fax: 207-899-2472 <br/>
                 <a href='mailto:" . MailUtil::MARIA_EMAIL . "' target='_blank' class='email'>" .

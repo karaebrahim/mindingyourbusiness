@@ -1,25 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>minding your business, inc.</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<?php
+  require_once 'util/layout.php';
 
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Antic+Slab' rel='stylesheet' type='text/css'>
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href='img/flower.png'
-                 rel='shortcut icon' />
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
+  LayoutUtil::displayHeadTag();
+?>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -27,23 +11,13 @@
 
         <!-- Add your site or application content here -->
         <div id="wrapper" class="clearfix">
-            <div id="top" class="clearfix">
-                <nav>
-                    <ul>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="services.html">services</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </nav>
-                <a href="index.html"><img src="img/logo3.png" /></a>
-                <p><a href="tel:+12076197068">ph: 207-619-7068</a> &emsp; fax: 207-899-2472 <br />
-                <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" class="email">maria@mindingyourbusinessinc.com</a></p>
-            </div><!-- end #top -->
-            
+<?php
+  LayoutUtil::displayNavigationBar();
+?>
             <div id="header">
                 <img src="img/iStock-portland.jpg" />
             </div><!-- end #header -->
-            
+
             <div id="content-wrap" class="clearfix">
                 <div id="main">
                     <div class="bio1">
@@ -77,7 +51,7 @@
                         </ul>
                     </div>
                 </div><!-- end #main -->
-                
+
                 <div id="sidebar">
                     <div id="contact">
                         <h2>contact</h2>
@@ -117,24 +91,12 @@
                     </div>
                 </div><!-- end #sidebar -->
             </div><!-- end #content-wrap -->
-
-            <div id="footer">
-                <p>minding your business, inc. &emsp; 7 tee drive &emsp; portland, me 04103</p>
-                <span><p>&copy; 2013 Kara Ebrahim</p></span>
-            </div><!-- end #footer -->
+<?php
+  LayoutUtil::displayFooter();
+?>
         </div><!-- end #wrapper -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+<?php
+  LayoutUtil::loadJavascriptMethods();
+?>
     </body>
 </html>
