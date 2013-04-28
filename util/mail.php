@@ -38,25 +38,4 @@
         <p>$headers</p>";
     }
   }
-
-  $displayType = null;
-  if (isset($_REQUEST["type"])) {
-    $displayType = $_REQUEST["type"];
-  }
-
-  if ($displayType == "contact") {
-    $name = null;
-    if (isset($_REQUEST["name"])) {
-      $name = $_REQUEST["name"];
-    }
-    $email = null;
-    if (isset($_REQUEST["email"])) {
-      $email = $_REQUEST["email"];
-    }
-    $msg = null;
-    if (isset($_REQUEST["msg"])) {
-      $msg = $_REQUEST["msg"];
-    }
-    MailUtil::sendContactMail($name, $email, $msg);
-  }
 ?>

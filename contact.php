@@ -1,30 +1,11 @@
-<?php
-  require_once 'util/mail.php';
-?>
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>minding your business, inc.</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
 
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Antic+Slab' rel='stylesheet' type='text/css'>
+<?php
+  require_once 'util/layout.php';
+  require_once 'util/mail.php';
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href='img/flower.png'
-                 rel='shortcut icon' />
-
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
+  LayoutUtil::displayHeader();
+?>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -33,22 +14,10 @@
         <!-- Add your site or application content here -->
         <form name="contactForm" action="contact.php" method="post">
         <div id="wrapper">
-            <div id="top" class="clearfix">
-                <nav>
-                    <ul>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="services.html">services</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </nav>
-                <a href="index.html"><img src="img/logo3.png" /></a>
-                <p class="center"><a href="tel:+12076197068">ph: 207-619-7068</a> &emsp; fax: 207-899-2472 <br />
+
 <?php
-  echo "<a href='mailto:" . MailUtil::MARIA_EMAIL . "' target='_blank' class='email'>" .
-       MailUtil::MARIA_EMAIL . "</a>";
+  LayoutUtil::displayNavigationBar();
 ?>
-                </p>
-            </div><!-- end #top -->
 
             <div id="header">
                 <img src="img/iStock-poppies.jpg" />
@@ -57,7 +26,8 @@
 <?php
   if (isset($_POST["confirm"])) {
     // If sending mail is confirmed, then send it & display confirmation message.
-    if (MailUtil::sendContactMail($_POST["confName"], $_POST["confEmail"], $_POST["confComments"])) {
+    if (MailUtil::sendContactMail(
+        $_POST["confName"], $_POST["confEmail"], $_POST["confComments"])) {
       echo "<div id='emailMessageDiv' class='alert alert-success center'>
               <button type='button' class='close' data-dismiss='alert'>&times;</button>
               <strong>Email sent successfully! Thank you!</strong>
@@ -101,10 +71,10 @@
                 </div>
             </div><!-- end #main -->
 
-            <div id="footer">
-                <p>minding your business, inc. &emsp; 7 tee drive &emsp; portland, me 04103</p>
-                <span><p>&copy; 2013 Kara Ebrahim</p></span>
-            </div><!-- end #footer -->
+<?php
+  LayoutUtil::displayFooter();
+?>
+
         </div><!-- end #wrapper -->
 
         <div id='emailModal' class='modal hide fade' tabindex='-1' role='dialog'
@@ -136,13 +106,9 @@
         </div>
         </form>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/bootstrap.js"></script>
-
 <?php
+  LayoutUtil::loadJavascriptMethods();
+
   if (isset($_POST["submit"])) {
     // If user tries to send contact email, show modal and remove form validation.
     echo "<script>
@@ -153,12 +119,5 @@
           </script>";
   }
 ?>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>
