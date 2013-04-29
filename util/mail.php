@@ -12,7 +12,7 @@
      */
     public static function sendContactMail($fromName, $fromEmail, $message) {
       $to = MailUtil::MARIA_EMAIL;
-      $subject = "Contact email from mindingyourbusinessinc.com";
+      $subject = "Contact from " . $fromName . " via mindingyourbusinessinc.com";
 
       // set headers
       $headers  = "From: " . $fromName . "&lt;" . $fromEmail . "&gt;\r\n";

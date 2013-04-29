@@ -452,7 +452,7 @@ b{
     padding-right:10px;
 }
 
-#service1 h1{
+#bookkeeping h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -462,7 +462,7 @@ b{
     background-repeat:no-repeat;
 }
 
-#service2 h1{
+#payroll h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -472,7 +472,7 @@ b{
     background-repeat:no-repeat;
 }
 
-#service3 h1{
+#quickbooks h1{
     float:left;
     width:170px;
     padding-left:70px;

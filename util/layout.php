@@ -1,5 +1,5 @@
 <?php
-
+  require_once "contactHelper.php";
   require_once "mail.php";
 
   /**
@@ -52,6 +52,40 @@
                     MailUtil::MARIA_EMAIL . "</a>
               </p>
             </div>"; // end #top
+    }
+
+    /**
+     * Displays a sidebar w/ a contact form, useful links and describes the features of the
+     * business.
+     */
+    public static function displaySidebar() {
+      echo "    <div id='sidebar'>";
+      ContactHelper::sendMailIfUserConfirms();
+      ContactHelper::displayContactForm("contact", "h2");
+      echo "        <div id=\"useful\">
+                        <h2>useful forms</h2>
+                        <ul>
+                            <li><a href=\"http://www.irs.gov/\" target=\"_blank\">Internal Revenue Service (IRS)</a></li>
+                            <li><a href=\"http://www.state.me.us/revenue/\" target=\"_blank\">Maine Revenue Services</a></li>
+                            <li><a href=\"http://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3\" target=\"_blank\">Federal W-4 2013</a></li>
+                            <li><a href=\"pdf/w4me.pdf\" target=\"_blank\">W-4 Maine Form</a></li>
+                            <li><a href=\"pdf/EE-Direct-Deposit.pdf\" target=\"_blank\">EE Direct Deposit Agreement</a></li>
+                            <li><a href=\"pdf/i-9.pdf\" target=\"_blank\">I-9</a></li>
+                        </ul>
+                    </div>
+
+                    <div id=\"features\">
+                        <h2>features</h2>
+                        <ul>
+                            <li>Personalized bookkeeping and payroll services, which can include invoicing, A/R, A/P, bank reconciliations, 1099 reporting, quarterly and annual payroll reporting, and financial reporting</li>
+                            <li>Monthly, quarterly, or annual compilation of your data</li>
+                            <li>Year-end financial reporting and communication with your tax accountant</li>
+                            <li>Client education to promote efficiency and positive cash flow</li>
+                            <li>QuickBooks education for business owners and their staff</li>
+                            <li>Timely filing of all government, payroll, and insurance forms</li>
+                        </ul>
+                    </div>
+                </div>"; // end #sidebar
     }
 
     /**
