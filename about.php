@@ -23,7 +23,7 @@
             <div id="content-wrap" class="clearfix">
                 <div id="main">
                     <div class="bio1">
-                        <img src="img/mom2.jpg" />
+                        <img src="img/maria2.jpg" />
                         <h1>about maria</h1>
                         <p><b>Maria Ebrahim</b> has been working with bookkeeping, payroll, and tax-preparation clients for almost 20 years. With a Bachelor’s Degree in Nursing from Villanova University and an Associate’s Degree in Accounting from University of Southern Maine, she has been addressing, organizing, and providing solutions for business owners' varied financial needs, no matter the required level of assistance.</p>
                         <p>Maria supports QuickBooks and Sage 50 accounting software, as well as the Advantage and QuickBooks Payroll platforms. She enjoys relationships with many area accountants, providing tandem services to mutual clients. She is a member in good standing of the American Institute of Professional Bookkeepers.</p>
