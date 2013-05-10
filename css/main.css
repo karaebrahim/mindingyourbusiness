@@ -135,7 +135,7 @@ body{
     border-top:3px solid #f0542e;
     border-bottom:3px solid #f0542e;
     margin-top:20px;
-    padding:15px 15px 15px 32px;
+    padding:14px 15px 14px 32px;
 }
 
 #top .email{
@@ -152,7 +152,6 @@ nav li, nav a{
 
 nav li{
     padding-top:15px;
-    padding-right:5px;
 }
 
 nav a{
@@ -177,6 +176,10 @@ h1{
 h2{
     font-family: 'Noto Sans', sans-serif;
     font-weight:normal;
+}
+
+h2,h3 {
+	line-height: 20px;
 }
 
 img{
@@ -448,7 +451,7 @@ b{
     padding-right:10px;
 }
 
-#service1 h1{
+#bookkeeping h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -458,7 +461,7 @@ b{
     background-repeat:no-repeat;
 }
 
-#service2 h1{
+#payroll h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -468,7 +471,7 @@ b{
     background-repeat:no-repeat;
 }
 
-#service3 h1{
+#quickbooks h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -486,13 +489,13 @@ iframe{
     margin-top:10px;
 }
 
+.center {
+	text-align:center;
+}
 
-
-
-
-
-
-
+.alert {
+	margin-top:10px;
+}
 
 
 
