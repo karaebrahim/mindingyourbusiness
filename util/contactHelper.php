@@ -42,11 +42,15 @@
                    minding your business, inc.:</p>";
       if (isset($_POST["originalEmailSubmit"])) {
         // If user tries to send contact email, modal will show what will be emailed.
-        echo "<strong>From:</strong> " . $_POST["name"] . " &lt;" . $_POST["email"] .
-             "&gt;<br/><br/>" . $_POST["comments"];
-        echo "<input type='hidden' name='confName' value='" . $_POST["name"] . "' />";
-        echo "<input type='hidden' name='confEmail' value='" . $_POST["email"] . "' />";
-        echo "<input type='hidden' name='confComments' value='" . $_POST["comments"] . "' />";
+        echo "<strong>From:</strong> " . stripslashes(trim($_POST["name"])) . " &lt;" .
+             stripslashes(trim($_POST["email"])) . "&gt;<br/><br/>" .
+             nl2br(stripslashes($_POST["comments"]));
+        echo "<input type='hidden' name='confName'
+                     value=\"" . stripslashes(trim($_POST["name"])) . "\" />";
+        echo "<input type='hidden' name='confEmail'
+                     value=\"" . stripslashes(trim($_POST["email"])) . "\" />";
+        echo "<input type='hidden' name='confComments'
+                     value=\"" . stripslashes($_POST["comments"]) . "\" />";
       }
       echo "</div>
             <div class='modal-footer'>
@@ -76,8 +80,8 @@
      */
     public static function sendMailIfUserConfirms() {
       if (isset($_POST["confirmEmailSubmit"])) {
-        if (MailUtil::sendContactMail(
-            $_POST["confName"], $_POST["confEmail"], $_POST["confComments"])) {
+        if (MailUtil::sendContactMail(stripslashes(trim($_POST["confName"])),
+            stripslashes(trim($_POST["confEmail"])), nl2br(stripslashes($_POST["confComments"])))) {
           echo "<div id='emailMessageDiv' class='alert alert-success center'>
                   <button type='button' class='close' data-dismiss='alert'>&times;</button>
                   <strong>Email sent successfully! Thanks!</strong>
