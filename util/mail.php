@@ -5,14 +5,14 @@
    */
   class MailUtil {
     const MARIA_EMAIL = "maria@mindingyourbusinessinc.com";
-    const MARIA2_EMAIL = "mariajebrahim@gmail.com";
+    const MARIA_GMAIL = "mariajebrahim@gmail.com";
     const KELLY_EMAIL = "kelly@mindingyourbusinessinc.com";
 
     /**
      * Sends the specified message w/ the specified subject to the specified set of users.
      */
     public static function sendContactMail($fromName, $fromEmail, $message) {
-      $to = MailUtil::MARIA2_EMAIL;
+      $to = MailUtil::MARIA_EMAIL;
       $subject = "Contact from " . $fromName . " via mindingyourbusinessinc.com";
 
       // set headers
@@ -22,6 +22,7 @@
       $headers .= "MIME-Version: 1.0" . "\r\n";
       $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
       //$headers .= "CC: " . MailUtil::KELLY_EMAIL . "\r\n";
+      $headers .= "BCC: " . MailUtil::MARIA_GMAIL . "\r\n";
 
       //MailUtil::displayMail($to, $subject, $message, $headers); return true;
       return mail($to, $subject, $message, $headers);
