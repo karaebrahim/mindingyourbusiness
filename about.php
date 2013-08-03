@@ -36,7 +36,6 @@
                         <p><b>Kelly Parks</b> is a part-time assistant bookkeeper in our business office, a part-time intern in an area accounting office, and a part-time student at University of Southern Maine. She holds a Bachelor’s Degree in Psychology and will, over the next several years, complete her Certificate of Accounting and her Master’s Degree in Business Administration, also from USM.</p>
                         <p>Kelly and her husband, Roger, reside in Windham.</p>
                     </div>
-
                     <div class="statement">
                         <h1>statement of ideals</h1>
                         <ul>
