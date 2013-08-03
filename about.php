@@ -49,7 +49,7 @@
                             <li>To be available to you commensurate with your business needs</li>
                             <li>To continue to educate you such that the bookkeeping process becomes a more efficient business model</li>
                             <li>To be committed to the success and well-being of your business</li>
-                            <li>To treat your business as my own—with integrity and respect</li>
+                            <li>To treat your business as our own—with integrity and respect</li>
                         </ul>
                     </div>
                 </div><!-- end #main -->

@@ -33,7 +33,7 @@
             <div id="welcome">
                 <div class="box">
                     <h1>welcome!</h1>
-                    <p>Minding Your Business, Inc. offers <a href="services.php">expert bookkeeping and payroll services</a> for small businesses and individuals throughout Southern Maine. We provide customized services designed to fit your distinct needs. Whether you need one-time assistance setting up your accounting program or ongoing bookkeeping support, we have the skills to get the job done.</p>
+                    <p>Minding Your Business, Inc. offers <a href="services.php">expert bookkeeping and payroll services</a> for small businesses and individuals throughout Southern Maine. We provide customized services designed to fit your distinct needs. Whether you require one-time assistance setting up your accounting program or ongoing bookkeeping support, we have the skills to get the job done.</p>
                     <p><a href="contact.php">Please contact me.</a> I would love to chat to see if I can assist with your bookkeeping needs.</p>
                     <p>—Maria Ebrahim | President</p>
                 </div>
