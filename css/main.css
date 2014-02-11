@@ -385,6 +385,10 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
+#footer p a{
+    color:#f0542e;
+}
+
 #footer span{
     float:right;
     padding-right:20px;

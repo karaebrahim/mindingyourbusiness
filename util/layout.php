@@ -94,7 +94,7 @@
     public static function displayFooter() {
       echo "<div id=\"footer\">
                 <p>minding your business, inc. &emsp; 7 tee drive &emsp; portland, me 04103</p>
-                <span><p>&copy; 2013 <a href=\"http://karaebrahim.com" target=\"_blank\">Kara Ebrahim</a></p></span>
+                <span><p>&copy; 2013 <a href=\"http://karaebrahim.com\" target=\"_blank\">Kara Ebrahim</a></p></span>
             </div>";
     }
 
