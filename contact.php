@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-  require_once 'util/contactHelper.php';
   require_once 'util/layout.php';
 
   LayoutUtil::displayHeadTag();
@@ -11,7 +10,6 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <form name="contactForm" action="contact.php" method="post">
         <div id="wrapper">
 <?php
   LayoutUtil::displayNavigationBar();
@@ -19,13 +17,17 @@
             <div id="header">
                 <img src="img/iStock-poppies.jpg" />
             </div><!-- end #header -->
-<?php
-  ContactHelper::sendMailIfUserConfirms();
-?>
             <div id="content">
+                <div id="contactinfo">
+                    <h1>contact</h1>
+                    <h2>Minding Your Business, Inc.</h2>
+                    <h3>Office: <a href='tel:2076197068'>207-619-7068</a></h3>
+                    <h3>Fax: 207-899-2472</h3>
 <?php
-  ContactHelper::displayContactForm("form", "h1");
+  echo "<h3>Email: <a href='mailto:" . MailUtil::INFO_EMAIL . "' target='_blank'
+                      class='email'>" . MailUtil::INFO_EMAIL . "</a></h3>";
 ?>
+                </div>
                 <div id="directions">
                     <h1>directions</h1>
                     <h2>7 Tee Drive, Portland, ME 04103</h2>
@@ -44,12 +46,7 @@
 ?>
         </div><!-- end #wrapper -->
 <?php
-  ContactHelper::displayEmailModal();
-?>
-        </form>
-<?php
   LayoutUtil::loadJavascriptMethods();
-  ContactHelper::showModalIfUserSubmits();
 ?>
     </body>
 </html>

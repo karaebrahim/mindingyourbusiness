@@ -7,6 +7,7 @@
     const MARIA_EMAIL = "maria@mindingyourbusinessinc.com";
     const MARIA_GMAIL = "mariajebrahim@gmail.com";
     const KELLY_EMAIL = "kelly@mindingyourbusinessinc.com";
+    const INFO_EMAIL = "info@mindingyourbusinessinc.com";
 
     /**
      * Sends the specified message w/ the specified subject to the specified set of users.
