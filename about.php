@@ -31,10 +31,10 @@
                     </div>
 
                     <div class="bio2">
-                        <img src="img/kelly2.jpg" />
-                        <h1>about kelly</h1>
-                        <p><b>Kelly Parks</b> is a part-time assistant bookkeeper in our business office, a part-time intern in an area accounting office, and a part-time student at University of Southern Maine. She holds a Bachelor’s Degree in Psychology and a Certificate of Accounting from USM, and will, over the next several years, complete the education and experience requirements for certification as a CPA.</p>
-                        <p>Kelly and her husband, Roger, reside in Windham.</p>
+                        <img src="img/sam.jpg" />
+                        <h1>about donna</h1>
+                        <p><b>Donna Rice</b> joins Minding Your Business with over twenty years of accounting experience as a former CPA and controller of closely-held companies. She enjoys helping small businesses achieve their goals and specializes in preparing companies for transition. Donna has a BA from the University of New Hampshire and a Masters from Franklin Pierce University. A fan of mysteries and puzzles, she will ask questions to improve processes and create or improve systems of internal control.</p>
+                        <p>Donna and her husband live in Freeport and have three adult children. She enjoys hiking in the fall, snowshoeing in the winter, and maintains an organic garden in the growing season.</p>
                     </div>
                     <div class="statement">
                         <h1>statement of ideals</h1>
