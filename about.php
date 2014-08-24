@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-  require_once 'util/contactHelper.php';
   require_once 'util/layout.php';
 
   LayoutUtil::displayHeadTag();
@@ -11,7 +10,6 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <form name="contactForm" action="about.php" method="post">
         <div id="wrapper" class="clearfix">
 <?php
   LayoutUtil::displayNavigationBar();
@@ -61,12 +59,7 @@
 ?>
         </div><!-- end #wrapper -->
 <?php
-  ContactHelper::displayEmailModal();
-?>
-        </form>
-<?php
   LayoutUtil::loadJavascriptMethods();
-  ContactHelper::showModalIfUserSubmits();
 ?>
     </body>
 </html>

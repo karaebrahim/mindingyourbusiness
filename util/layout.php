@@ -47,7 +47,7 @@
               </nav>
               <a href=\"index.php\"><img src=\"img/logo3.png\" /></a>
               <p class=\"center\">
-                <a href=\"tel:+12076197068\">ph: 207-619-7068</a> &emsp; fax: 207-899-2472 <br/>
+                <a href=\"tel:2076197068\">ph: 207-619-7068</a> &emsp; fax: 207-899-2472 <br/>
                 <a href='mailto:" . MailUtil::MARIA_EMAIL . "' target='_blank' class='email'>" .
                     MailUtil::MARIA_EMAIL . "</a>
               </p>
@@ -59,10 +59,15 @@
      * business.
      */
     public static function displaySidebar() {
-      echo "    <div id='sidebar'>";
-      ContactHelper::sendMailIfUserConfirms();
-      ContactHelper::displayContactForm("contact", "h2");
-      echo "        <div id=\"useful\">
+      echo "    <div id='sidebar'>
+                    <div id=\"contact\">
+                        <h2>contact</h2>
+                        Office: <a href='tel:2076197068'>207-619-7068</a><br/>
+                        Fax: 207-899-2472<br/>
+                        Email: <a href='mailto:" . MailUtil::INFO_EMAIL . "' target='_blank'
+                                  class='email'>" . MailUtil::INFO_EMAIL . "</a>
+                    </div>
+                    <div id=\"useful\">
                         <h2>useful forms</h2>
                         <ul>
                             <li><a href=\"http://www.irs.gov/\" target=\"_blank\">Internal Revenue Service (IRS)</a></li>
