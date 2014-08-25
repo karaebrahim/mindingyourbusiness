@@ -316,6 +316,12 @@ a.bookkeeping:hover h2{
     font-weight:bold;
 }
 
+#contactinfo a{
+    text-decoration:underline;
+    color: #f0542e;
+    font-weight:bold;
+}
+
 #top a{
     text-decoration:none;
     color:black;
