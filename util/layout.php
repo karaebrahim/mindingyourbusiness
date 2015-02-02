@@ -20,7 +20,7 @@
         <head>
           <meta charset=\"utf-8\">
           <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">
-          <title>minding your business, inc | bookkeeping and accounting</title>
+          <title>minding your business, inc | bookkeeping services</title>
           <meta name=\"description\" content=\"Minding Your Business, Inc. offers expert bookkeeping and payroll services for small businesses and individuals throughout Southern Maine. \">
           <meta name=\"viewport\" content=\"width=device-width\">
           <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Antic+Slab'
