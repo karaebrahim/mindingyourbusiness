@@ -230,6 +230,15 @@ nav ul{
     margin-bottom:20px;
 }
 
+.box a{
+    border-bottom:1px solid #f0542e;
+}
+
+.box a:hover{
+    border-bottom:1px solid #d84b29;
+    color: #d84b29;
+}
+
 .bookkeeping{
     float:left;
     width:150px;
