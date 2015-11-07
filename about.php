@@ -28,12 +28,12 @@
                         <p>She and her husband, Kurt, have four adult children and presently reside in West Falmouth. She has been a member of IAABO Board #21 since 1996, working every winter as a Varsity basketball official in the Greater Portland area.</p>
                     </div>
 
-                    <div class="bio2">
+                    <!-- <div class="bio2">
                         <img src="img/sam.jpg" />
                         <h1>about donna</h1>
                         <p><b>Donna Rice</b> joins Minding Your Business with over twenty years of accounting experience as a former CPA and controller of closely-held companies. She enjoys helping small businesses achieve their goals and specializes in preparing companies for transition. Donna has a BA from the University of New Hampshire and a Masters from Franklin Pierce University. A fan of mysteries and puzzles, she will ask questions to improve processes and create or improve systems of internal control.</p>
                         <p>Donna and her husband live in Freeport and have three adult children. She enjoys hiking in the fall, snowshoeing in the winter, and maintains an organic garden in the growing season.</p>
-                    </div>
+                    </div> -->
                     <div class="statement">
                         <h1>statement of ideals</h1>
                         <ul>
