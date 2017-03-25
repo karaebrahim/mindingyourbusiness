@@ -21,6 +21,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -330,6 +331,10 @@ a.bookkeeping:hover h2{
 
 #benefits ul{
     padding-left:20px;
+}
+
+#benefits li{
+    padding-bottom:10px;
 }
 
 .box p a{
