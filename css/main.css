@@ -340,7 +340,10 @@ a.bookkeeping:hover h2{
 #contactinfo a{
     text-decoration:underline;
     color: #f0542e;
-    font-weight:bold;
+}
+
+#contactinfo a:hover{
+    border-bottom:none !important;
 }
 
 #top a{
