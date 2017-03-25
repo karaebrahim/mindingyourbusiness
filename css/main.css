@@ -20,7 +20,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /*
@@ -96,8 +96,8 @@ textarea {
 body{
     background-image:url("../img/knitting250px.png");
     background-repeat:repeat;
-    font-family: 'Antic Slab', serif;
-    font-size:90%;
+    font-family: 'Open Sans', serif;
+    font-size:100%;
 }
 
 #wrapper{
@@ -106,6 +106,12 @@ body{
     background-image:url("../img/lightpaperfibers.png");
     background-repeat:repeat;
     box-shadow: 3px 3px 25px rgba(0, 0, 0, .2);
+}
+
+a:hover{
+    color:#f0542e !important;
+    border-bottom:1px solid #f0542e !important;
+    transition: all 0.5s ease;
 }
 
 #top{
@@ -157,13 +163,15 @@ nav li{
 nav a{
     text-decoration:none;
     color:black;
-    padding: 5px 20px 20px 20px;
+    padding: 5px 18px 20px;
     margin-right:5px;
     margin-left:5px;
 }
 
 nav a:hover{
     background-color:#b5e1e1;
+    color:#f0542e;
+    border-bottom:none !important;
 }
 
 h1{
@@ -363,6 +371,10 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
+.statement li{
+    padding-bottom:10px;
+}
+
 #form, #directions, #contactinfo, #officehours {
     width:500px;
     margin:0 auto;
@@ -421,6 +433,7 @@ a.bookkeeping:hover h2{
     width:310px;
     float:right;
     padding:20px;
+    font-size:90%;
 }
 
 #sidebar h2, #main h2{
@@ -433,12 +446,20 @@ a.bookkeeping:hover h2{
 
 #sidebar a{
     text-decoration:none;
+    border-bottom:1px solid #000;
     color:black;
+}
+
+#sidebar a[href^="tel:2076197068"]{
+    border-bottom:none;
 }
 
 #sidebar a:visited{
     text-decoration:none;
-    color:#f0542e;
+}
+
+#sidebar li{
+    padding-bottom:10px;
 }
 
 #contact input[type="text"], #contact input[type="email"]{

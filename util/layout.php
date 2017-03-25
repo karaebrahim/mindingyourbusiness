@@ -23,7 +23,7 @@
           <title>minding your business, inc | bookkeeping services</title>
           <meta name=\"description\" content=\"Minding Your Business, Inc. offers expert bookkeeping and payroll services for small businesses and individuals throughout Southern Maine. \">
           <meta name=\"viewport\" content=\"width=device-width\">
-          <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Antic+Slab'
+          <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Antic+Slab|Open+Sans'
                 rel='stylesheet' type='text/css'>
           <link href='img/flower.png' rel='shortcut icon' />
           <link rel=\"stylesheet\" href=\"css/bootstrap.css\">
