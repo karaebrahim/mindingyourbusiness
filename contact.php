@@ -28,6 +28,14 @@
                       class='email'>" . MailUtil::INFO_EMAIL . "</a></h3>";
 ?>
                 </div>
+                <div id="officehours">
+                    <h1>office hours</h1>
+                    <h3>Monday: 12:00–5:00 pm<br/></h3>
+                    <h3>Tuesday: 8:30–5:00 pm<br/></h3>
+                    <h3>Wednesday: 8:30–5:00 pm<br/></h3>
+                    <h3>Thursday: 8:30–5:00 pm<br/></h3>
+                    <h3>Friday: Closed</h3>
+                </div>
                 <div id="directions">
                     <h1>directions</h1>
                     <h2>7 Tee Drive, Portland, ME 04103</h2>

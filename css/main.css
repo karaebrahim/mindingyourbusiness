@@ -363,7 +363,7 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
-#form, #directions, #contactinfo {
+#form, #directions, #contactinfo, #officehours {
     width:500px;
     margin:0 auto;
     padding-top:10px;

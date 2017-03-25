@@ -67,6 +67,14 @@
                         Email: <a href='mailto:" . MailUtil::INFO_EMAIL . "' target='_blank'
                                   class='email'>" . MailUtil::INFO_EMAIL . "</a>
                     </div>
+                    <div id=\"office-hours\">
+                        <h2>office hours</h2>
+                        Monday: 12:00–5:00 pm<br/>
+                        Tuesday: 8:30–5:00 pm<br/>
+                        Wednesday: 8:30–5:00 pm<br/>
+                        Thursday: 8:30–5:00 pm<br/>
+                        Friday: Closed
+                    </div>
                     <div id=\"useful\">
                         <h2>useful forms</h2>
                         <ul>
