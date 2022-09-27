@@ -7,6 +7,7 @@ import Body from './assets/body';
 import Footer from './assets/footer';
 import About from './assets/about';
 import Services from './assets/services';
+import Contact from './assets/contact';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path='/' element={<Body/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/services' element={<Services/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer />
     </ThemeProvider>

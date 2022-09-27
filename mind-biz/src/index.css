@@ -200,32 +200,6 @@
        background-position:40px 0px;
    }
    
-   #form, #directions{
-       width:500px;
-       margin:0 auto;
-       padding-top:10px;
-   }
-   
-   #directions{
-       margin-bottom:20px;
-   }
-   
-   #form input[type="text"], #form input[type="email"]{
-       width:500px;
-       margin-bottom:20px;
-   }
-   
-   #form textarea{
-       width:500px;
-       height:200px;
-       margin-bottom:10px;
-   }
-   
-   #form input[type="submit"]{
-       font-size:80%;
-       margin-bottom:10px;
-   }
-   
    b{
        color:#f0542e;
    }

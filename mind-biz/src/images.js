@@ -9,4 +9,5 @@ export const images = {
   tea: `${url}/img/iStock-tea.jpg`,
   tape: `${url}/img/iStock-tape.jpg`,
   computer: `${url}/img/iStock-computer.jpg`,
+  flowers: `${url}/img/iStock-poppies.jpg`,
 };
