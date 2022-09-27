@@ -128,21 +128,6 @@
        max-width:980px;
    }
    
-   #benefits, #welcome{
-       width:865px;
-       /*border-top:2px solid #f0542e;*/
-       padding:20px 50px 20px 65px;
-   }
-   
-   .box{
-       width:810px;
-       background-color:#eeeeee;
-       padding:20px;
-       box-shadow: 0px 2px 5px rgba(0, 0, 0, .6);
-       /*margin-top:20px;*/
-       margin-bottom:20px;
-   }
-   
    .bookkeeping{
        float:left;
        width:150px;
@@ -217,19 +202,6 @@
        background-image:url("./img/book-stack.png");
        background-repeat:no-repeat;
        background-position:40px 0px;
-   }
-   
-   #benefits ul{
-       padding-left:20px;
-   }
-   
-   .box p a{
-       color: #f0542e;
-       font-weight:bold;
-   }
-   
-   .box p a:hover{
-       opacity: 0.8;
    }
    
    .bio1{
