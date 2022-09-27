@@ -5,20 +5,17 @@ import theme from './config/theme';
 import Header from './assets/header';
 import Body from './assets/body';
 import Footer from './assets/footer';
-import { PAGE_PATHS } from './config/project';
+import About from './assets/about';
+import Services from './assets/services';
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
       <Routes>
-        {PAGE_PATHS.map((path, i) => (
-          <Route
-            key={i}
-            path={path}
-            element={<Body path={path} />}
-          />
-        ))}
+        <Route exact path='/' element={<Body/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/services' element={<Services/>}/>
       </Routes>
       <Footer />
     </ThemeProvider>

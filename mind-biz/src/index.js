@@ -1,13 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './app';
 
-const root = document.getElementById('mindbiz-root');
-render(
+const container = document.getElementById('mindbiz-root');
+const root = createRoot(container);
+
+root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-  root,
+  </BrowserRouter>
 );
