@@ -1,15 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
-
-const Header = styled.div`
-  margin-top: 20px;
-   
-  img {
-    border-top: 15px solid ${props => props.theme.primary};
-    border-bottom: 15px solid ${props => props.theme.primary};
-  }
-`;
+import PageHeader from './pageheader';
 
 const Form = styled.div`
   width: 500px;
@@ -42,9 +34,7 @@ const Directions = styled.div`
 const Contact = () => {
   return (
     <>
-      <Header>
-        <img src={images.flowers} alt="" />
-      </Header>
+      <PageHeader image={images.flowers} />
       <div>
         <Form>
           <h1>contact</h1>

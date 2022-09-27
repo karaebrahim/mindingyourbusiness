@@ -1,16 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
+import PageHeader from './pageheader';
 import Sidebar from './sidebar';
-
-const Header = styled.div`
-  margin-top: 20px;
-   
-  img {
-    border-top: 15px solid ${props => props.theme.primary};
-    border-bottom: 15px solid ${props => props.theme.primary};
-  }
-`;
 
 const Container = styled.div`
   width: 560px;
@@ -51,9 +43,7 @@ const Statement = styled.div`
 const About = () => {
   return (
     <>
-      <Header id="header">
-        <img src={images.city} alt="" />
-      </Header>
+      <PageHeader image={images.city} />
       <div className="clearfix">
         <Container>
           <Biography>

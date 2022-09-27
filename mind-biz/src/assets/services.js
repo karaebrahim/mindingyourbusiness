@@ -1,16 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
+import PageHeader from './pageheader';
 import Sidebar from './sidebar';
-
-const Header = styled.div`
-  margin-top: 20px;
-   
-  img {
-    border-top: 15px solid ${props => props.theme.primary};
-    border-bottom: 15px solid ${props => props.theme.primary};
-  }
-`;
 
 const Container = styled.div`
   width: 560px;
@@ -33,14 +25,42 @@ const Service = styled.div`
     float: left;
     padding-right: 10px;
   }
+
+  #service1 h1 {
+    float: left;
+    width: 170px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    background-image: url(${images.book});
+    background-repeat: no-repeat;
+  }
+   
+  #service2 h1 {
+    float: left;
+    width: 170px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    background-image: url(${images.calculator});
+    background-repeat: no-repeat;
+  }
+   
+  #service3 h1 {
+    float: left;
+    width: 170px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    background-image: url(${images.clock});
+    background-repeat: no-repeat;
+  }
 `;
 
 const Services = () => {
   return (
     <>
-      <Header id="header">
-        <img src={images.garden} alt="" />
-      </Header>
+      <PageHeader image={images.garden} />
       <div className="clearfix">
         <Container>
           <Service>
