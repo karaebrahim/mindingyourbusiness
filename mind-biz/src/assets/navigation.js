@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  float: left;
   border-top: 3px solid ${props => props.theme.secondary};
   border-bottom: 3px solid ${props => props.theme.secondary};
   margin-top: 20px;
   padding-left: 25px;
-  width: 312px;
 
   ul {
     padding:0;

@@ -18,14 +18,14 @@ const Container = styled.div`
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.2);
 
   h1 {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-weight: normal;
     color: ${props => props.theme.secondary};
     margin: 0;
   }
    
   h2 {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     font-weight: normal;
   }
    
