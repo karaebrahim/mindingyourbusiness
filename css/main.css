@@ -20,8 +20,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.4;
 }
 
 /*
@@ -97,8 +96,8 @@ textarea {
 body{
     background-image:url("../img/knitting250px.png");
     background-repeat:repeat;
-    font-family: 'Open Sans', serif;
-    font-size:100%;
+    font-family: 'Antic Slab', serif;
+    font-size:90%;
 }
 
 #wrapper{
@@ -107,12 +106,6 @@ body{
     background-image:url("../img/lightpaperfibers.png");
     background-repeat:repeat;
     box-shadow: 3px 3px 25px rgba(0, 0, 0, .2);
-}
-
-a:hover{
-    color:#f0542e !important;
-    border-bottom:1px solid #f0542e !important;
-    transition: all 0.5s ease;
 }
 
 #top{
@@ -142,7 +135,7 @@ a:hover{
     border-top:3px solid #f0542e;
     border-bottom:3px solid #f0542e;
     margin-top:20px;
-    padding:14px 15px 14px 32px;
+    padding:15px 15px 15px 32px;
 }
 
 #top .email{
@@ -159,20 +152,19 @@ nav li, nav a{
 
 nav li{
     padding-top:15px;
+    padding-right:5px;
 }
 
 nav a{
     text-decoration:none;
     color:black;
-    padding: 5px 18px 20px;
+    padding: 5px 20px 20px 20px;
     margin-right:5px;
     margin-left:5px;
 }
 
 nav a:hover{
     background-color:#b5e1e1;
-    color:#f0542e;
-    border-bottom:none !important;
 }
 
 h1{
@@ -185,14 +177,6 @@ h1{
 h2{
     font-family: 'Noto Sans', sans-serif;
     font-weight:normal;
-}
-
-h3{
-    font-weight:100;
-}
-
-h2,h3 {
-	line-height: 20px;
 }
 
 img{
@@ -218,15 +202,18 @@ nav ul{
     margin:0 auto;
 }
 
+#buttons h2{
+    font-size: 1.25em;
+}
+
 #buttons a{
     display:block;
     text-decoration:none;
-    color:#000;
+    color:black;
 }
 
 #buttons a:hover{
-    color:#fff !important;
-    border-bottom:none !important;
+    color:white;
 }
 
 #benefits, #welcome{
@@ -242,15 +229,6 @@ nav ul{
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .6);
     /*margin-top:20px;*/
     margin-bottom:20px;
-}
-
-.box a{
-    border-bottom:1px solid #f0542e;
-}
-
-.box a:hover{
-    border-bottom:1px solid #d84b29;
-    color: #d84b29;
 }
 
 .bookkeeping{
@@ -333,22 +311,10 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
-#benefits li{
-    padding-bottom:10px;
-}
-
 .box p a{
     text-decoration:none;
     color: #f0542e;
-}
-
-#contactinfo a{
-    text-decoration:underline;
-    color: #f0542e;
-}
-
-#contactinfo a:hover{
-    border-bottom:none !important;
+    font-weight:bold;
 }
 
 #top a{
@@ -383,11 +349,7 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
-.statement li, #benefit li{
-    padding-bottom:10px;
-}
-
-#form, #directions, #contactinfo, #officehours {
+#form, #directions{
     width:500px;
     margin:0 auto;
     padding-top:10px;
@@ -424,17 +386,13 @@ a.bookkeeping:hover h2{
     padding-left:20px;
 }
 
-#footer p a{
-    color:#f0542e;
-}
-
-#footer a:hover{
-    border-bottom:none !important;
-}
-
 #footer span{
     float:right;
     padding-right:20px;
+}
+
+b{
+    color:#f0542e;
 }
 
 #main{
@@ -449,7 +407,6 @@ a.bookkeeping:hover h2{
     width:310px;
     float:right;
     padding:20px;
-    font-size:90%;
 }
 
 #sidebar h2, #main h2{
@@ -462,20 +419,12 @@ a.bookkeeping:hover h2{
 
 #sidebar a{
     text-decoration:none;
-    border-bottom:1px solid #000;
     color:black;
-}
-
-#sidebar a[href^="tel:2076197068"]{
-    border-bottom:none;
 }
 
 #sidebar a:visited{
     text-decoration:none;
-}
-
-#sidebar li{
-    padding-bottom:10px;
+    color:#f0542e;
 }
 
 #contact input[type="text"], #contact input[type="email"]{
@@ -503,7 +452,7 @@ a.bookkeeping:hover h2{
     padding-right:10px;
 }
 
-#bookkeeping h1{
+#service1 h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -513,7 +462,7 @@ a.bookkeeping:hover h2{
     background-repeat:no-repeat;
 }
 
-#payroll h1{
+#service2 h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -523,7 +472,7 @@ a.bookkeeping:hover h2{
     background-repeat:no-repeat;
 }
 
-#quickbooks h1{
+#service3 h1{
     float:left;
     width:170px;
     padding-left:70px;
@@ -541,13 +490,13 @@ iframe{
     margin-top:10px;
 }
 
-.center {
-	text-align:center;
-}
 
-.alert {
-	margin-top:10px;
-}
+
+
+
+
+
+
 
 
 
