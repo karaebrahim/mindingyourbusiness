@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <Top className="clearfix">
       <Navigation />
-      <a href="index.html"><img src={images.logo} alt="logo" /></a>
+      <a href="/"><img src={images.logo} alt="logo" /></a>
       <Para>
         <a href="tel:+12076197068">ph: 207-619-7068</a><br />
         <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" className="email" rel="noreferrer">maria@mindingyourbusinessinc.com</a>

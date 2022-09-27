@@ -38,9 +38,9 @@ const Navigation = () => {
   return (
     <Nav>
       <ul>
-        <ListItem><Link href="about.html">about</Link></ListItem>
-        <ListItem><Link href="services.html">services</Link></ListItem>
-        <ListItem><Link href="contact.html">contact</Link></ListItem>
+        <ListItem><Link href="about">about</Link></ListItem>
+        <ListItem><Link href="services">services</Link></ListItem>
+        <ListItem><Link href="contact">contact</Link></ListItem>
       </ul>
     </Nav>
   );
