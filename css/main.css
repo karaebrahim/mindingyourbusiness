@@ -316,6 +316,10 @@ a.bookkeeping:hover h2{
     font-weight:bold;
 }
 
+.box p a:hover{
+    opacity: 0.8;
+}
+
 #top a{
     text-decoration:none;
     color:black;
