@@ -120,9 +120,9 @@ const Sidebar = () => {
           <li><a href="http://www.irs.gov/" target="_blank" rel="noreferrer" >Internal Revenue Service (IRS)</a></li>
           <li><a href="http://www.state.me.us/revenue/" target="_blank" rel="noreferrer" >Maine Revenue Services</a></li>
           <li><a href="http://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank" rel="noreferrer" >Federal Form W-4</a></li>
-          <li><a href="pdf/w4me.pdf" target="_blank" >Maine Form W-4</a></li>
-          <li><a href="pdf/EE-Direct-Deposit.pdf" target="_blank" >EE Direct Deposit Agreement</a></li>
-          <li><a href="pdf/i-9.pdf" target="_blank" >I-9</a></li>
+          <li><a href="https://www.mindingyourbusinessinc.com/pdf/w4me.pdf" target="_blank" rel="noreferrer" >Maine Form W-4</a></li>
+          <li><a href="https://www.mindingyourbusinessinc.com/pdf/EE-Direct-Deposit.pdf" target="_blank" rel="noreferrer" >EE Direct Deposit Agreement</a></li>
+          <li><a href="https://www.mindingyourbusinessinc.com/pdf/i-9.pdf" target="_blank" rel="noreferrer" >I-9</a></li>
         </ul>
       </Forms>
       <div>
