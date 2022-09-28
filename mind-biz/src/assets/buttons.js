@@ -48,15 +48,15 @@ const Link = styled.a`
 const Buttons = () => {
   return (
     <Container>
-      <Link href="services#service1">
+      <Link href="/services#service1">
         <span className="material-symbols-outlined">book</span>
         <h2>bookkeeping</h2>
       </Link>
-      <Link href="services#service2">
+      <Link href="/services#service2">
         <span className="material-symbols-outlined">calculate</span>
         <h2>payroll reporting</h2>
       </Link>
-      <Link href="services#service3">
+      <Link href="/services#service3">
         <span className="material-symbols-outlined">schedule</span>
         <h2>quickbooks</h2>
       </Link>
