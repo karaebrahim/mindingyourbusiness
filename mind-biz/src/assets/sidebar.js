@@ -6,10 +6,12 @@ const Container = styled.div`
   width: 310px;
   float: right;
   padding: 20px;
+  border-left: 10px solid ${props => props.theme.lightGray};
 
   ${breakpointBelow.tablet} {
     width: auto;
     float: none;
+    border-left: none;
     border-top: 10px solid ${props => props.theme.lightGray};
   }
    

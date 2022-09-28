@@ -10,14 +10,12 @@ const Container = styled.div`
   float: left;
   padding: 20px;
   padding-right: 30px;
-  border-right: 10px solid ${props => props.theme.lightGray};
   line-height: 1.5;
   min-height: 1050px;
 
   ${breakpointBelow.tablet} {
     width: auto;
     float: none;
-    border-right: none;
     min-height: auto;
   }
 `;
