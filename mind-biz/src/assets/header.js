@@ -5,8 +5,7 @@ import Navigation from './navigation';
 
 const Top = styled.div`
   padding-top: 20px;
-  margin: 0 auto;
-  width: 980px;
+  display: flex;
 
   img {
     float: left;
@@ -15,7 +14,7 @@ const Top = styled.div`
 
   a {
     text-decoration: none;
-    color: black;
+    color: ${props => props.theme.black};
   }
 `;
 
@@ -35,7 +34,7 @@ const Para = styled.p`
 
 const Header = () => {
   return (
-    <Top className="clearfix">
+    <Top>
       <Navigation />
       <a href="/"><img src={images.logo} alt="logo" /></a>
       <Para>
