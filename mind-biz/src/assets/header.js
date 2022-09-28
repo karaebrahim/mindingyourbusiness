@@ -7,7 +7,6 @@ const Top = styled.div`
   padding-top: 20px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 
   a {
     text-decoration: none;
