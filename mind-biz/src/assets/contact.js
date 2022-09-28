@@ -58,14 +58,14 @@ const Contact = () => {
       <div>
         <Form>
           <h1>contact</h1>
-          <form action="mailto:maria@mindingyourbusinessinc.com" method="post" enctype="text/plain">
-            <fieldset class="personal-info">
+          <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+            <fieldset>
               <label for="name">name </label><input type="text" name="name" id="name" />
               <label for="email">email </label><input type="email" name="email" id="email" />
             </fieldset>
-            <fieldset class="comment-info">
-              <label class="column">questions/comments </label>
-              <textarea class="comments"></textarea>
+            <fieldset>
+              <label for="comments">questions/comments </label>
+              <textarea id="comments" name="comments"></textarea>
               <input type="submit" value="Submit" />
             </fieldset>
           </form>
@@ -73,7 +73,7 @@ const Contact = () => {
 
         <Directions>
           <h1>directions</h1>
-          <h3>7 Tee Drive, Portland, ME 04103</h3>
+          <h2>7 Tee Drive, Portland, ME 04103</h2>
           <h3>From I-95, North or South</h3>
           <p>Enter the Maine Turnpike and exit the highway at Exit 48, Portland/ Westbrook. Turn right at Riverside Street, travel approximately 1 mile, and turn right at 1039 Riverside Street. Turn left onto Tee Drive.</p>
           <h3>From downtown Portland</h3>

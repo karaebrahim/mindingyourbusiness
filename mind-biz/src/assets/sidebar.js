@@ -74,14 +74,14 @@ const Sidebar = () => {
     <Container>
       <Contact>
         <h2>contact</h2>
-        <form action="mailto:maria@mindingyourbusinessinc.com" method="post" enctype="text/plain">
-          <fieldset className="personal-info">
+        <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+          <fieldset>
             <label for="name">name </label><input type="text" name="name" id="name" />
             <label for="email">email </label><input type="email" name="email" id="email" />
           </fieldset>
-          <fieldset className="comment-info">
-            <label className="column">questions/comments </label>
-            <textarea className="comments"></textarea>
+          <fieldset>
+            <label for="comments">questions/comments </label>
+            <textarea id="comments" name="comments"></textarea>
             <input type="submit" value="Submit" />
           </fieldset>
         </form>
