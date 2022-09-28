@@ -6,11 +6,8 @@ const Container = styled.div`
   padding: 20px 50px 20px 65px;
 `;
 
-const Box = styled.div`
+const Wrapper = styled.div`
   width: 810px;
-  background-color: ${props => props.theme.gray};
-  padding: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   margin-bottom: 20px;
 
   ul {
@@ -21,7 +18,7 @@ const Box = styled.div`
 const Benefits = () => {
   return (
     <Container>
-      <Box>
+      <Wrapper className="box">
         <h1>benefits</h1>
         <ul>
           <li>Frees up your time so you can concentrate on growing and maintaining your business</li>
@@ -31,7 +28,7 @@ const Benefits = () => {
           <li>Reduces audit and non-compliance issues with the Federal and State goverment agencies</li>
           <li>Relieves stress for the business owner knowing that your company is being thoroughly attended</li>
         </ul>
-      </Box>
+      </Wrapper>
     </Container>
   );
 }

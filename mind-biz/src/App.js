@@ -36,6 +36,12 @@ const Container = styled.div`
   b {
     color: ${props => props.theme.secondary};
   }
+
+  .box {
+    background-color: ${props => props.theme.gray};
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+  }
 `;
 
 const App = () => {
