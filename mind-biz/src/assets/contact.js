@@ -2,11 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Form = styled.div`
   width: 500px;
   margin: 0 auto;
   padding-top: 10px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    padding: 20px;
+  }
 
   input[type="text"], input[type="email"] {
     width: 500px;
@@ -16,9 +22,13 @@ const Form = styled.div`
     height: 2rem;
     font-size: 100%;
     padding-left: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
-  textarea{
+  textarea {
     width: 500px;
     height: 200px;
     margin-bottom: 10px;
@@ -27,6 +37,10 @@ const Form = styled.div`
     font-size: 100%;
     font-family: 'Roboto';
     padding: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
   
   input[type="submit"] {
@@ -39,8 +53,19 @@ const Form = styled.div`
     font-family: 'Roboto';
     cursor: pointer;
 
+    ${breakpointBelow.tablet} {
+      width: 5rem;
+    }
+
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  fieldset {
+    ${breakpointBelow.tablet} {
+      display: flex;
+      flex-direction: column;
     }
   }
 `;
@@ -49,6 +74,17 @@ const Directions = styled.div`
   width: 500px;
   margin: 0 auto 20px;
   padding-top: 10px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    padding: 20px;
+  }
+
+  iframe {
+    ${breakpointBelow.tabletPortrait} {
+      width: auto;
+    }
+  }
 `;
 
 const Contact = () => {
