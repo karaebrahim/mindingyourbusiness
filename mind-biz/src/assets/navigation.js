@@ -6,10 +6,13 @@ const Nav = styled.nav`
   border-bottom: 3px solid ${props => props.theme.secondary};
   margin-top: 20px;
   padding-left: 25px;
+  display: flex;
+  align-items: flex-end;
 
   ul {
-    padding:0;
-    margin:0;
+    display: flex;
+    padding: 0;
+    margin: 0;
   }
 `;
 
@@ -29,6 +32,7 @@ const Link = styled.a`
 
   &:hover {
     background-color: ${props => props.theme.primary};
+    border-radius: 3px 3px 0 0;
   }
 `;
 

@@ -6,16 +6,16 @@ import Navigation from './navigation';
 const Top = styled.div`
   padding-top: 20px;
   display: flex;
-
-  img {
-    float: left;
-    width: 300px;
-  }
+  align-items: center;
 
   a {
     text-decoration: none;
     color: ${props => props.theme.black};
   }
+`;
+
+const Logo = styled.img`
+  width: 300px;
 `;
 
 const Para = styled.p`
@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <Top>
       <Navigation />
-      <a href="/"><img src={images.logo} alt="logo" /></a>
+      <a href="/"><Logo src={images.logo} alt="logo" /></a>
       <Para>
         <a href="tel:+12076197068">ph: 207-619-7068</a><br />
         <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" className="email" rel="noreferrer">maria@mindingyourbusinessinc.com</a>
