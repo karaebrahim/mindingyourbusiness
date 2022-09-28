@@ -11,7 +11,7 @@ import Services from './assets/services';
 import Contact from './assets/contact';
 
 const Container = styled.div`
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
   background-image: url(${images.paper});
   background-repeat: repeat;

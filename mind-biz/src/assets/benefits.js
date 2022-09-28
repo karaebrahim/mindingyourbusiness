@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
-  width: 865px;
+  max-width: 865px;
   padding: 20px 50px 20px 65px;
+
+  ${breakpointBelow.tablet} {
+    padding: 40px;
+  }
 `;
 
 const Wrapper = styled.div`
-  width: 810px;
+  max-width: 810px;
   margin-bottom: 20px;
 
   ul {

@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   img {
     border-top: 15px solid ${props => props.theme.primary};
     border-bottom: 15px solid ${props => props.theme.primary};
+    width: 100%;
   }
 `;
 

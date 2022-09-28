@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
 import Sidebar from './sidebar';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   width: 560px;
@@ -12,6 +13,13 @@ const Container = styled.div`
   border-right: 10px solid ${props => props.theme.lightGray};
   line-height: 1.5;
   min-height: 1050px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    float: none;
+    border-right: none;
+    min-height: auto;
+  }
 `;
 
 const Biography = styled.div`
@@ -27,6 +35,10 @@ const Statement = styled.div`
   width: 520px;
   margin-top: 30px;
   margin-bottom: 20px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+  }
    
   ul {
     padding-left: 20px;

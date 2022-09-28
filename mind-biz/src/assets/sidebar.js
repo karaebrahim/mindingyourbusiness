@@ -1,10 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   width: 310px;
   float: right;
   padding: 20px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    float: none;
+    border-top: 10px solid ${props => props.theme.lightGray};
+  }
    
   h2 {
     color: ${props => props.theme.secondary};
@@ -34,6 +41,10 @@ const Contact = styled.div`
     height: 2rem;
     font-size: 100%;
     padding-left: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
   textarea {
@@ -45,6 +56,10 @@ const Contact = styled.div`
     font-size: 100%;
     font-family: 'Roboto';
     padding: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
   input[type="submit"] {
@@ -57,8 +72,19 @@ const Contact = styled.div`
     font-family: 'Roboto';
     cursor: pointer;
 
+    ${breakpointBelow.tablet} {
+      width: 5rem;
+    }
+
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  fieldset {
+    ${breakpointBelow.tablet} {
+      display: flex;
+      flex-direction: column;
     }
   }
 `;
