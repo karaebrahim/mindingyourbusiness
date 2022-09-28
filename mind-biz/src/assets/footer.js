@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <Container>
       <p>minding your business, inc. | <a href="https://goo.gl/maps/SWM5zowXtBwCDS4P6" target="_blank" rel="noreferrer">7 tee drive, portland me 04103</a></p>
-      <Span><p>&copy; 2022 Kara Ebrahim</p></Span>
+      <Span><p>&copy; 2022 <a href="https://github.com/karaebrahim/mindingyourbusiness" target="_blank" rel="noreferrer">Kara Ebrahim</a></p></Span>
     </Container>
   );
 }
