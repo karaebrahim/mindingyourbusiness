@@ -94,13 +94,13 @@ const Contact = () => {
       <div>
         <Form>
           <h1>contact</h1>
-          <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+          <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" encType="text/plain">
             <fieldset>
-              <label for="name">name </label><input type="text" name="name" id="name" />
-              <label for="email">email </label><input type="email" name="email" id="email" />
+              <label htmlFor="name">name </label><input type="text" name="name" id="name" />
+              <label htmlFor="email">email </label><input type="email" name="email" id="email" />
             </fieldset>
             <fieldset>
-              <label for="comments">questions/comments </label>
+              <label htmlFor="comments">questions/comments </label>
               <textarea id="comments" name="comments"></textarea>
               <input type="submit" value="Submit" />
             </fieldset>
@@ -115,7 +115,7 @@ const Contact = () => {
           <h3>From downtown Portland</h3>
           <p>Head southwest on Congress Street aproximately 0.4 miles, and then turn right at Forest Avenue. After 4.6 miles, turn right at Riverside Street, and after 0.7 miles, turn right at 1039 Riverside Street. Turn left onto Tee Drive.</p>
           <small>To find via GPS, enter 1039 Riverside Street, Portland, ME 04103</small>
-          <iframe title="map" width="500" height="350" frameborder="2" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;source=embed" style={{ color: "#f0542e", textAlign: "left"}}>View Larger Map</a></small>
+          <iframe title="map" width="500" height="350" frameBorder="2" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=7+tee+drive+portland+me&amp;ie=UTF8&amp;hq=&amp;hnear=Tee+Dr,+Portland,+Cumberland,+Maine+04103&amp;gl=us&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=43.710084,-70.312432&amp;source=embed" style={{ color: "#f0542e", textAlign: "left"}}>View Larger Map</a></small>
         </Directions>
       </div>
     </>

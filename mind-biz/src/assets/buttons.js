@@ -49,15 +49,15 @@ const Buttons = () => {
   return (
     <Container>
       <Link href="services#service1">
-        <span class="material-symbols-outlined">book</span>
+        <span className="material-symbols-outlined">book</span>
         <h2>bookkeeping</h2>
       </Link>
       <Link href="services#service2">
-        <span class="material-symbols-outlined">calculate</span>
+        <span className="material-symbols-outlined">calculate</span>
         <h2>payroll reporting</h2>
       </Link>
       <Link href="services#service3">
-        <span class="material-symbols-outlined">schedule</span>
+        <span className="material-symbols-outlined">schedule</span>
         <h2>quickbooks</h2>
       </Link>
     </Container>

@@ -2,33 +2,43 @@ import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
 import Navigation from './navigation';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Top = styled.div`
-  background-color: ${props => props.theme.secondary};
+  background-color: ${props => props.theme.white};
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 10;
 
+  ${breakpointBelow.tablet} {
+    flex-direction: column;
+  }
+
   a {
     text-decoration: none;
-    color: ${props => props.theme.white};
+    color: ${props => props.theme.secondary};
   }
 `;
 
 const Logo = styled.img`
-  width: 250px;
+  width: 200px;
 `;
 
 const Para = styled.p`
   font-size: 90%;
   padding-right: 2rem;
 
+  ${breakpointBelow.tablet} {
+    text-align: center;
+    padding-right: 0;
+  }
+
   .email {
-    border-bottom: 1px solid ${props => props.theme.white};
+    border-bottom: 1px solid ${props => props.theme.secondary};
   }
 `;
 
