@@ -11,17 +11,37 @@ const Form = styled.div`
   input[type="text"], input[type="email"] {
     width: 500px;
     margin-bottom: 20px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    height: 2rem;
+    font-size: 100%;
+    padding-left: 0.5rem;
   }
    
   textarea{
     width: 500px;
     height: 200px;
     margin-bottom: 10px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    font-size: 100%;
+    font-family: 'Roboto';
+    padding: 0.5rem;
   }
   
   input[type="submit"] {
-    font-size: 80%;
     margin-bottom: 10px;
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.black};
+    border: 1px solid ${props => props.theme.primary};
+    padding: 8px;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 
