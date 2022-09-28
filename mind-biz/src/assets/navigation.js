@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  border-top: 3px solid ${props => props.theme.secondary};
-  border-bottom: 3px solid ${props => props.theme.secondary};
   margin-top: 20px;
   padding-left: 25px;
   display: flex;
@@ -18,20 +16,22 @@ const Nav = styled.nav`
 
 const ListItem = styled.li`
   display: inline-block;
-  padding-top: 15px;
-  padding-right: 5px;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  font-size: 1.15rem;
 `;
 
 const Link = styled.a`
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: ${props => props.theme.white};
   padding: 5px 20px 20px 20px;
   margin-right: 5px;
   margin-left: 5px;
 
   &:hover {
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.white};
+    color: ${props => props.theme.secondary};
     border-radius: 3px 3px 0 0;
   }
 `;
