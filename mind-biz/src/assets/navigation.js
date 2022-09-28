@@ -32,6 +32,12 @@ const Link = styled(NavLink)`
   margin-right: 5px;
   margin-left: 5px;
 
+  ${breakpointBelow.tabletPortrait} {
+    padding: 5px 10px 20px 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
   &:hover {
     background-color: ${props => props.theme.primary};
     color: ${props => props.theme.black};

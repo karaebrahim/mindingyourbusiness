@@ -1,14 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
-  height: 40px;
+  min-height: 40px;
   background-color: ${props => props.theme.primary};
+
+  ${breakpointBelow.tabletPortrait} {
+    display: flex;
+    flex-direction: column;
+  }
    
    p {
     float:left;
     font-size: 80%;
     padding-left: 20px;
+
+    ${breakpointBelow.tabletPortrait} {
+      margin: 0.5rem;
+    }
    }
 
    a {
