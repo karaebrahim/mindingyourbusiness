@@ -3,18 +3,20 @@ import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
 import Sidebar from './sidebar';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   width: 560px;
   float: left;
   padding: 20px;
   padding-right: 30px;
-  border-right: 10px solid ${props => props.theme.lightGray};
   line-height: 1.5;
   min-height: 1050px;
 
-  h2 {
-    color: ${props => props.theme.primary};
+  ${breakpointBelow.tablet} {
+    width: auto;
+    float: none;
+    min-height: auto;
   }
 `;
 
@@ -29,11 +31,12 @@ const Biography = styled.div`
 
 const Statement = styled.div`
   width: 520px;
-  background-color: ${props => props.theme.gray};
-  padding: 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, .6);
   margin-top: 30px;
   margin-bottom: 20px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+  }
    
   ul {
     padding-left: 20px;
@@ -54,7 +57,7 @@ const About = () => {
             <p>She and her husband, Kurt, have four adult children and five grandchildren and presently reside in West Falmouth. She has been a member of IAABO Board #21 since 1996, working every winter as a Varsity basketball official in the Greater Portland area.</p>
           </Biography>
 
-          <Statement>
+          <Statement className="box">
             <h1>statement of ideals</h1>
             <ul>
               <li>To provide efficient, timely, and relevant bookkeeping and payroll reporting services, in accordance with generally accepted accounting principles</li>

@@ -3,15 +3,21 @@ import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
 import Sidebar from './sidebar';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   width: 560px;
   float: left;
   padding: 20px;
   padding-right: 30px;
-  border-right: 10px solid ${props => props.theme.lightGray};
   line-height: 1.5;
   min-height: 1050px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    min-height: auto;
+    float: none;
+  }
 
   h2 {
     color: ${props => props.theme.primary};
@@ -24,6 +30,10 @@ const Service = styled.div`
   img {
     float: left;
     padding-right: 10px;
+
+    ${breakpointBelow.tablet} {
+      display: none;
+    }
   }
 `;
 

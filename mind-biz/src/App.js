@@ -11,7 +11,7 @@ import Services from './assets/services';
 import Contact from './assets/contact';
 
 const Container = styled.div`
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
   background-image: url(${images.paper});
   background-repeat: repeat;
@@ -35,6 +35,12 @@ const Container = styled.div`
 
   b {
     color: ${props => props.theme.secondary};
+  }
+
+  .box {
+    background-color: ${props => props.theme.gray};
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   }
 `;
 

@@ -1,10 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   width: 310px;
   float: right;
   padding: 20px;
+  border-left: 10px solid ${props => props.theme.lightGray};
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    float: none;
+    border-left: none;
+    border-top: 10px solid ${props => props.theme.lightGray};
+  }
    
   h2 {
     color: ${props => props.theme.secondary};
@@ -29,17 +38,56 @@ const Contact = styled.div`
   input[type="text"], input[type="email"] {
     width: 280px;
     margin-bottom: 20px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    height: 2rem;
+    font-size: 100%;
+    padding-left: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
   textarea {
     width: 280px;
     height: 200px;
     margin-bottom: 10px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    font-size: 100%;
+    font-family: 'Roboto';
+    padding: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
   input[type="submit"] {
-    font-size: 80%;
     margin-bottom: 10px;
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.black};
+    border: 1px solid ${props => props.theme.primary};
+    padding: 8px;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    cursor: pointer;
+
+    ${breakpointBelow.tablet} {
+      width: 5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  fieldset {
+    ${breakpointBelow.tablet} {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `;
 
@@ -54,14 +102,14 @@ const Sidebar = () => {
     <Container>
       <Contact>
         <h2>contact</h2>
-        <form action="mailto:maria@mindingyourbusinessinc.com" method="post" enctype="text/plain">
-          <fieldset className="personal-info">
+        <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+          <fieldset>
             <label for="name">name </label><input type="text" name="name" id="name" />
             <label for="email">email </label><input type="email" name="email" id="email" />
           </fieldset>
-          <fieldset className="comment-info">
-            <label className="column">questions/comments </label>
-            <textarea className="comments"></textarea>
+          <fieldset>
+            <label for="comments">questions/comments </label>
+            <textarea id="comments" name="comments"></textarea>
             <input type="submit" value="Submit" />
           </fieldset>
         </form>

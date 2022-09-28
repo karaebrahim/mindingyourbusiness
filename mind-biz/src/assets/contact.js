@@ -2,26 +2,71 @@ import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Form = styled.div`
   width: 500px;
   margin: 0 auto;
   padding-top: 10px;
 
+  ${breakpointBelow.tablet} {
+    width: auto;
+    padding: 20px;
+  }
+
   input[type="text"], input[type="email"] {
     width: 500px;
     margin-bottom: 20px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    height: 2rem;
+    font-size: 100%;
+    padding-left: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
    
-  textarea{
+  textarea {
     width: 500px;
     height: 200px;
     margin-bottom: 10px;
+    border: 2px solid ${props => props.theme.primary};
+    border-radius: 3px;
+    font-size: 100%;
+    font-family: 'Roboto';
+    padding: 0.5rem;
+
+    ${breakpointBelow.tablet} {
+      width: auto;
+    }
   }
   
   input[type="submit"] {
-    font-size: 80%;
     margin-bottom: 10px;
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.black};
+    border: 1px solid ${props => props.theme.primary};
+    padding: 8px;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    cursor: pointer;
+
+    ${breakpointBelow.tablet} {
+      width: 5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  fieldset {
+    ${breakpointBelow.tablet} {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `;
 
@@ -29,6 +74,17 @@ const Directions = styled.div`
   width: 500px;
   margin: 0 auto 20px;
   padding-top: 10px;
+
+  ${breakpointBelow.tablet} {
+    width: auto;
+    padding: 20px;
+  }
+
+  iframe {
+    ${breakpointBelow.tabletPortrait} {
+      width: auto;
+    }
+  }
 `;
 
 const Contact = () => {
@@ -38,14 +94,14 @@ const Contact = () => {
       <div>
         <Form>
           <h1>contact</h1>
-          <form action="mailto:maria@mindingyourbusinessinc.com" method="post" enctype="text/plain">
-            <fieldset class="personal-info">
+          <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+            <fieldset>
               <label for="name">name </label><input type="text" name="name" id="name" />
               <label for="email">email </label><input type="email" name="email" id="email" />
             </fieldset>
-            <fieldset class="comment-info">
-              <label class="column">questions/comments </label>
-              <textarea class="comments"></textarea>
+            <fieldset>
+              <label for="comments">questions/comments </label>
+              <textarea id="comments" name="comments"></textarea>
               <input type="submit" value="Submit" />
             </fieldset>
           </form>
@@ -53,7 +109,7 @@ const Contact = () => {
 
         <Directions>
           <h1>directions</h1>
-          <h3>7 Tee Drive, Portland, ME 04103</h3>
+          <h2>7 Tee Drive, Portland, ME 04103</h2>
           <h3>From I-95, North or South</h3>
           <p>Enter the Maine Turnpike and exit the highway at Exit 48, Portland/ Westbrook. Turn right at Riverside Street, travel approximately 1 mile, and turn right at 1039 Riverside Street. Turn left onto Tee Drive.</p>
           <h3>From downtown Portland</h3>

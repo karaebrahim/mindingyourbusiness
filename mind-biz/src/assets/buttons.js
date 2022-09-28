@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 auto;
+
+  ${breakpointBelow.tabletPortrait} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Link = styled.a`
@@ -20,6 +26,10 @@ const Link = styled.a`
   background-color: ${props => props.theme.primary};
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
   border-radius: 3px;
+
+  ${breakpointBelow.tabletPortrait} {
+    margin: 20px;
+  }
    
   &:hover{
     color: ${props => props.theme.white};
