@@ -16,6 +16,7 @@ const Container = styled.div`
   background-image: url(${images.paper});
   background-repeat: repeat;
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
 
   h1 {
     font-family: 'Roboto Slab', sans-serif;
@@ -47,8 +48,8 @@ const Container = styled.div`
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <Container>
-        <Header />
         <Routes>
           <Route exact path='/' element={<Body/>}/>
           <Route path='/about' element={<About/>}/>

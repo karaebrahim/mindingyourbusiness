@@ -102,13 +102,13 @@ const Sidebar = () => {
     <Container>
       <Contact>
         <h2>contact</h2>
-        <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" enctype="text/plain">
+        <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" encType="text/plain">
           <fieldset>
-            <label for="name">name </label><input type="text" name="name" id="name" />
-            <label for="email">email </label><input type="email" name="email" id="email" />
+            <label htmlFor="name">name </label><input type="text" name="name" id="name" />
+            <label htmlFor="email">email </label><input type="email" name="email" id="email" />
           </fieldset>
           <fieldset>
-            <label for="comments">questions/comments </label>
+            <label htmlFor="comments">questions/comments </label>
             <textarea id="comments" name="comments"></textarea>
             <input type="submit" value="Submit" />
           </fieldset>

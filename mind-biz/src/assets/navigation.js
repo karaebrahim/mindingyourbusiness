@@ -1,37 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import { breakpointBelow } from '../config/breakpoints';
 
 const Nav = styled.nav`
-  border-top: 3px solid ${props => props.theme.secondary};
-  border-bottom: 3px solid ${props => props.theme.secondary};
-  margin-top: 20px;
-  padding-left: 25px;
   display: flex;
-  align-items: flex-end;
 
   ul {
     display: flex;
     padding: 0;
-    margin: 0;
+    margin: 22px 0 0;
   }
 `;
 
 const ListItem = styled.li`
   display: inline-block;
-  padding-top: 15px;
-  padding-right: 5px;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+
+  ${breakpointBelow.tablet} {
+    font-size: 1rem;
+  }
 `;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: ${props => props.theme.white};
   padding: 5px 20px 20px 20px;
   margin-right: 5px;
   margin-left: 5px;
 
   &:hover {
     background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.black};
+    border-radius: 3px 3px 0 0;
+  }
+
+  &.active {
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.black};
     border-radius: 3px 3px 0 0;
   }
 `;
@@ -40,9 +49,9 @@ const Navigation = () => {
   return (
     <Nav>
       <ul>
-        <ListItem><Link href="about">about</Link></ListItem>
-        <ListItem><Link href="services">services</Link></ListItem>
-        <ListItem><Link href="contact">contact</Link></ListItem>
+        <ListItem><Link activeClassName="active" to="/about">about</Link></ListItem>
+        <ListItem><Link activeClassName="active" to="/services">services</Link></ListItem>
+        <ListItem><Link activeClassName="active" to="/contact">contact</Link></ListItem>
       </ul>
     </Nav>
   );
