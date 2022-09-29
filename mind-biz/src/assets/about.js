@@ -5,6 +5,14 @@ import PageHeader from './pageheader';
 import Sidebar from './sidebar';
 import { breakpointBelow } from '../config/breakpoints';
 
+const Wrapper = styled.div`
+  display: flex;
+
+  ${breakpointBelow.tablet} {
+    flex-direction: column;
+  }
+`;
+
 const Container = styled.div`
   width: 560px;
   float: left;
@@ -48,7 +56,7 @@ const About = () => {
   return (
     <>
       <PageHeader image={images.city} />
-      <div className="clearfix">
+      <Wrapper>
         <Container>
           <Biography>
             <img src={images.headshot} alt="Maria Ebrahim headshot" />
@@ -75,7 +83,7 @@ const About = () => {
           </Statement>
         </Container>
         <Sidebar />
-      </div>
+      </Wrapper>
     </>
   );
 }

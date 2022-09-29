@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormStyles } from './form';
 import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
@@ -34,65 +35,7 @@ const Container = styled.div`
   }
 `;
 
-const Contact = styled.div`
-  input[type="text"], input[type="email"] {
-    width: 280px;
-    margin-bottom: 20px;
-    border: 2px solid ${props => props.theme.primary};
-    border-radius: 3px;
-    height: 2rem;
-    font-size: 100%;
-    padding-left: 0.5rem;
-
-    ${breakpointBelow.tablet} {
-      width: auto;
-    }
-  }
-   
-  textarea {
-    width: 280px;
-    height: 200px;
-    margin-bottom: 10px;
-    border: 2px solid ${props => props.theme.primary};
-    border-radius: 3px;
-    font-size: 100%;
-    font-family: 'Roboto';
-    padding: 0.5rem;
-
-    ${breakpointBelow.tablet} {
-      width: auto;
-    }
-  }
-   
-  input[type="submit"] {
-    margin-bottom: 10px;
-    background-color: ${props => props.theme.primary};
-    color: ${props => props.theme.black};
-    border: 1px solid ${props => props.theme.primary};
-    padding: 8px;
-    border-radius: 3px;
-    font-family: 'Roboto';
-    cursor: pointer;
-    -webkit-appearance: none;
-
-    ${breakpointBelow.tablet} {
-      width: 5rem;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  fieldset {
-    ${breakpointBelow.tablet} {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-`;
-
-const Forms = styled.div`
+const Wrapper = styled.div`
   a {
     border-bottom:1px solid ${props => props.theme.black};
   }
@@ -101,7 +44,7 @@ const Forms = styled.div`
 const Sidebar = () => {
   return (
     <Container>
-      <Contact>
+      <FormStyles>
         <h2>contact</h2>
         <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" encType="text/plain">
           <fieldset>
@@ -114,8 +57,8 @@ const Sidebar = () => {
             <input type="submit" value="Submit" />
           </fieldset>
         </form>
-      </Contact>
-      <Forms>
+      </FormStyles>
+      <Wrapper>
         <h2>useful forms</h2>
         <ul>
           <li><a href="http://www.irs.gov/" target="_blank" rel="noreferrer" >Internal Revenue Service (IRS)</a></li>
@@ -125,7 +68,7 @@ const Sidebar = () => {
           <li><a href="https://www.mindingyourbusinessinc.com/pdf/EE-Direct-Deposit.pdf" target="_blank" rel="noreferrer" >EE Direct Deposit Agreement</a></li>
           <li><a href="https://www.mindingyourbusinessinc.com/pdf/i-9.pdf" target="_blank" rel="noreferrer" >I-9</a></li>
         </ul>
-      </Forms>
+      </Wrapper>
       <div>
         <h2>features</h2>
         <ul>

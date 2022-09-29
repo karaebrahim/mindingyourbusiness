@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
+import { FormStyles } from './form';
 import { breakpointBelow } from '../config/breakpoints';
 
-const Form = styled.div`
+const Form = styled(FormStyles)`
   width: 500px;
   margin: 0 auto;
   padding-top: 10px;
@@ -12,62 +13,6 @@ const Form = styled.div`
   ${breakpointBelow.tablet} {
     width: auto;
     padding: 20px;
-  }
-
-  input[type="text"], input[type="email"] {
-    width: 500px;
-    margin-bottom: 20px;
-    border: 2px solid ${props => props.theme.primary};
-    border-radius: 3px;
-    height: 2rem;
-    font-size: 100%;
-    padding-left: 0.5rem;
-
-    ${breakpointBelow.tablet} {
-      width: auto;
-    }
-  }
-   
-  textarea {
-    width: 500px;
-    height: 200px;
-    margin-bottom: 10px;
-    border: 2px solid ${props => props.theme.primary};
-    border-radius: 3px;
-    font-size: 100%;
-    font-family: 'Roboto';
-    padding: 0.5rem;
-
-    ${breakpointBelow.tablet} {
-      width: auto;
-    }
-  }
-  
-  input[type="submit"] {
-    margin-bottom: 10px;
-    background-color: ${props => props.theme.primary};
-    color: ${props => props.theme.black};
-    border: 1px solid ${props => props.theme.primary};
-    padding: 8px;
-    border-radius: 3px;
-    font-family: 'Roboto';
-    cursor: pointer;
-    -webkit-appearance: none;
-
-    ${breakpointBelow.tablet} {
-      width: 5rem;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  fieldset {
-    ${breakpointBelow.tablet} {
-      display: flex;
-      flex-direction: column;
-    }
   }
 `;
 

@@ -5,6 +5,14 @@ import PageHeader from './pageheader';
 import Sidebar from './sidebar';
 import { breakpointBelow } from '../config/breakpoints';
 
+const Wrapper = styled.div`
+  display: flex;
+
+  ${breakpointBelow.tablet} {
+    flex-direction: column;
+  }
+`;
+
 const Container = styled.div`
   width: 560px;
   float: left;
@@ -59,7 +67,7 @@ const Services = () => {
   return (
     <>
       <PageHeader image={images.garden} />
-      <div className="clearfix">
+      <Wrapper>
         <Container>
           <Service>
             <img src={images.tea} alt="" />
@@ -93,7 +101,7 @@ const Services = () => {
           </Service>
         </Container>
         <Sidebar />
-      </div>
+      </Wrapper>
     </>
   );
 }
