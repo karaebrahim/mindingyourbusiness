@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { breakpointBelow } from '../config/breakpoints';
 
@@ -13,7 +14,7 @@ const Container = styled.div`
   }
 `;
 
-const Link = styled.a`
+const ButtonLink = styled(Link)`
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -48,18 +49,18 @@ const Link = styled.a`
 const Buttons = () => {
   return (
     <Container>
-      <Link href="/services#service1">
+      <ButtonLink to="/services#service1">
         <span className="material-symbols-outlined">book</span>
         <h2>bookkeeping</h2>
-      </Link>
-      <Link href="/services#service2">
+      </ButtonLink>
+      <ButtonLink to="/services#service2">
         <span className="material-symbols-outlined">calculate</span>
         <h2>payroll reporting</h2>
-      </Link>
-      <Link href="/services#service3">
+      </ButtonLink>
+      <ButtonLink to="/services#service3">
         <span className="material-symbols-outlined">schedule</span>
         <h2>quickbooks</h2>
-      </Link>
+      </ButtonLink>
     </Container>
   );
 }

@@ -42,6 +42,7 @@ const Container = styled.div`
     background-color: ${props => props.theme.gray};
     padding: 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
   }
 `;
 

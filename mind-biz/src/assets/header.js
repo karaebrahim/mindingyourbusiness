@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { images } from '../images';
 import Navigation from './navigation';
@@ -45,7 +46,7 @@ const Para = styled.p`
 const Header = () => {
   return (
     <Top>
-      <a href="/"><Logo src={images.logo} alt="logo" /></a>
+      <Link to="/"><Logo src={images.logo} alt="logo" /></Link>
       <Navigation />
       <Para>
         <a href="tel:+12076197068">ph: 207-619-7068</a><br />

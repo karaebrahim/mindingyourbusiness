@@ -26,6 +26,7 @@ const Biography = styled.div`
   img {
     float: left;
     margin-right: 20px;
+    border-radius: 3px;
   }
 `;
 

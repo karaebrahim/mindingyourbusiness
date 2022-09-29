@@ -52,6 +52,7 @@ const Form = styled.div`
     border-radius: 3px;
     font-family: 'Roboto';
     cursor: pointer;
+    -webkit-appearance: none;
 
     ${breakpointBelow.tablet} {
       width: 5rem;
