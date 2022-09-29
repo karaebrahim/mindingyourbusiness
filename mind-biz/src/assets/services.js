@@ -29,7 +29,8 @@ const Service = styled.div`
    
   img {
     float: left;
-    padding-right: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
 
     ${breakpointBelow.tablet} {
       display: none;
