@@ -1,7 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 import { breakpointBelow } from '../config/breakpoints';
 
-export const FormStyles = styled.div`
+const Container = styled.div`
   input[type="text"], input[type="email"] {
     margin-bottom: 20px;
     border: 2px solid ${props => props.theme.primary};
@@ -51,3 +52,33 @@ export const FormStyles = styled.div`
     flex-direction: column;
   }
 `;
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const email = 'maria@mindingyourbusinessinc.com';
+  const subject = 'question from your website';
+  const message = document.getElementById('comments').value;
+  
+  window.open(`mailto:${email}?subject=${subject}&body=${message}`);
+}
+
+const Form = (props) => {
+  return (
+    <Container>
+      {props.h1 ? <h1>contact</h1> : <h2>contact</h2>}
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <label htmlFor="name">name </label><input type="text" name="name" id="name" />
+          <label htmlFor="email">email </label><input type="email" name="email" id="email" />
+        </fieldset>
+        <fieldset>
+          <label htmlFor="comments">questions/comments </label>
+          <textarea id="comments" name="comments"></textarea>
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </Container>
+  );
+}
+
+export default Form;

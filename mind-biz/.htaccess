@@ -1,0 +1,6 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{about} !-f
+RewriteCond %{services} !-d
+RewriteCond %{contact} !-l
+RewriteRule ^ index.html [QSA,L]

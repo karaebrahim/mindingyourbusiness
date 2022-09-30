@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { images } from '../images';
 import PageHeader from './pageheader';
-import { FormStyles } from './form';
+import Form from './form';
 import { breakpointBelow } from '../config/breakpoints';
 
-const Form = styled(FormStyles)`
+const FormContainer = styled.div`
   width: 500px;
   margin: 0 auto;
   padding-top: 10px;
@@ -38,21 +38,9 @@ const Contact = () => {
     <>
       <PageHeader image={images.flowers} />
       <div>
-        <Form>
-          <h1>contact</h1>
-          <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" encType="text/plain">
-            <fieldset>
-              <label htmlFor="name">name </label><input type="text" name="name" id="name" />
-              <label htmlFor="email">email </label><input type="email" name="email" id="email" />
-            </fieldset>
-            <fieldset>
-              <label htmlFor="comments">questions/comments </label>
-              <textarea id="comments" name="comments"></textarea>
-              <input type="submit" value="Submit" />
-            </fieldset>
-          </form>
-        </Form>
-
+        <FormContainer>
+          <Form h1 />
+        </FormContainer>
         <Directions>
           <h1>directions</h1>
           <h2>7 Tee Drive, Portland, ME 04103</h2>
