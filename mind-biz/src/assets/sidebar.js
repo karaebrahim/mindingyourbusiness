@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormStyles } from './form';
+import Form from './form';
 import { breakpointBelow } from '../config/breakpoints';
 
 const Container = styled.div`
@@ -44,20 +44,7 @@ const Wrapper = styled.div`
 const Sidebar = () => {
   return (
     <Container>
-      <FormStyles>
-        <h2>contact</h2>
-        <form action="mailto:maria@mindingyourbusinessinc.com" method="POST" encType="text/plain">
-          <fieldset>
-            <label htmlFor="name">name </label><input type="text" name="name" id="name" />
-            <label htmlFor="email">email </label><input type="email" name="email" id="email" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="comments">questions/comments </label>
-            <textarea id="comments" name="comments"></textarea>
-            <input type="submit" value="Submit" />
-          </fieldset>
-        </form>
-      </FormStyles>
+      <Form />
       <Wrapper>
         <h2>useful forms</h2>
         <ul>
