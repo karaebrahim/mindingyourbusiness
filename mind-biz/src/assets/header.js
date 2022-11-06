@@ -5,15 +5,20 @@ import { images } from '../images';
 import Navigation from './navigation';
 import { breakpointBelow } from '../config/breakpoints';
 
-const Top = styled.div`
+const Container = styled.div`
   background-color: ${props => props.theme.white};
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 10;
+`;
+
+const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85rem;
+  margin: 0 auto;
 
   ${breakpointBelow.tablet} {
     flex-direction: column;
@@ -45,14 +50,16 @@ const Para = styled.p`
 
 const Header = () => {
   return (
-    <Top>
-      <Link to="/"><Logo src={images.logo} alt="logo" /></Link>
-      <Navigation />
-      <Para>
-        <a href="tel:+12076197068">ph: 207-619-7068</a><br />
-        <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" className="email" rel="noreferrer">maria@mindingyourbusinessinc.com</a>
-      </Para>
-    </Top>
+    <Container>
+      <Top>
+        <Link to="/"><Logo src={images.logo} alt="logo" /></Link>
+        <Navigation />
+        <Para>
+          <a href="tel:+12076197068">ph: 207-619-7068</a><br />
+          <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" className="email" rel="noreferrer">maria@mindingyourbusinessinc.com</a>
+        </Para>
+      </Top>
+    </Container>
   );
 }
 
