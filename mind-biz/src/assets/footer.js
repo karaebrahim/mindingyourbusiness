@@ -10,7 +10,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
   }
-   
+
    p {
     float:left;
     font-size: 80%;
@@ -34,7 +34,7 @@ const Span = styled.span`
 const Footer = () => {
   return (
     <Container>
-      <p>minding your business, inc. | <a href="https://goo.gl/maps/SWM5zowXtBwCDS4P6" target="_blank" rel="noreferrer">7 tee drive, portland me 04103</a></p>
+      <p>minding your business, inc.</p>
       <Span><p>&copy; 2022 <a href="https://github.com/karaebrahim/mindingyourbusiness" target="_blank" rel="noreferrer">Kara Ebrahim</a></p></Span>
     </Container>
   );
