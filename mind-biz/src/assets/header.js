@@ -55,7 +55,7 @@ const Header = () => {
         <Link to="/"><Logo src={images.logo} alt="logo" /></Link>
         <Navigation />
         <Para>
-          <a href="tel:+12076197068">ph: 207-619-7068</a><br />
+          <a href="tel:+12072339438">ph: 207-233-9438</a><br />
           <a href="mailto:maria@mindingyourbusinessinc.com" target="_blank" className="email" rel="noreferrer">maria@mindingyourbusinessinc.com</a>
         </Para>
       </Top>
